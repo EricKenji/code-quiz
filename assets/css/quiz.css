@@ -1,0 +1,22 @@
+.choice-box {
+    display:flex;
+    background-color: #5b00ec;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+
+.choice-num {
+    color: white;
+    padding-right: 5px;
+}
+
+.choice-text {
+    color: white;
+}
