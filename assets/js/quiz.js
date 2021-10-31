@@ -60,19 +60,19 @@ function startGame() {
     box2.addEventListener("click", function box2Listener() {
         score = score - 15;
         document.getElementById("displayScore").innerHTML = score;
-        box1.removeEventListener("click", box2Listener);
+        box2.removeEventListener("click", box2Listener);
         questionTwo();
     });
     box3.addEventListener("click", function box3Listener() {
         alert("Correct");
-        box1.removeEventListener("click", box3Listener)
+        box3.removeEventListener("click", box3Listener)
         questionTwo();
 
     });
     box4.addEventListener("click", function box4Listener() {
         score = score - 15;
         document.getElementById("displayScore").innerHTML = score;
-        box1.removeEventListener("click", box4Listener)
+        box4.removeEventListener("click", box4Listener)
         questionTwo();
     });
 
@@ -94,19 +94,19 @@ function questionTwo() {
     box2.addEventListener("click", function box2Listener() {
         score = score - 15;
         document.getElementById("displayScore").innerHTML = score;
-        box1.removeEventListener("click", box2Listener);
+        box2.removeEventListener("click", box2Listener);
         questionThree();
     });
     box3.addEventListener("click", function box3Listener() {
         alert("Correct");
-        box1.removeEventListener("click", box3Listener);
+        box3.removeEventListener("click", box3Listener);
         questionThree();
 
     });
     box4.addEventListener("click", function box4Listener() {
         score = score - 15;
         document.getElementById("displayScore").innerHTML = score;
-        box1.removeEventListener("click", box4Listener);
+        box4.removeEventListener("click", box4Listener);
         questionThree();
     });
 }
@@ -127,18 +127,18 @@ function questionThree() {
     box2.addEventListener("click", function box2Listener() {
         score = score - 15;
         document.getElementById("displayScore").innerHTML = score;
-        box1.removeEventListener("click", box2Listener);
+        box2.removeEventListener("click", box2Listener);
         questionFour();
     });
     box3.addEventListener("click", function box3Listener() {
         score = score - 15;
         document.getElementById("displayScore").innerHTML = score;
-        box1.removeEventListener("click", box3Listener);
+        box3.removeEventListener("click", box3Listener);
         questionFour();
     });
     box4.addEventListener("click", function box4Listener() {
         alert("Correct");
-        box1.removeEventListener("click", box4Listener);
+        box4.removeEventListener("click", box4Listener);
         questionFour();
     });
 }
@@ -159,18 +159,18 @@ function questionFour() {
     box2.addEventListener("click", function box2Listener() {
         score = score - 15;
         document.getElementById("displayScore").innerHTML = score;
-        box1.removeEventListener("click", box2Listener);
+        box2.removeEventListener("click", box2Listener);
         questionFive();
     });
     box3.addEventListener("click", function box3Listener() {
         alert("Correct");
-        box1.removeEventListener("click", box4Listener);
+        box3.removeEventListener("click", box3Listener);
         questionFive();
     });
     box4.addEventListener("click", function box4Listener() {
         score = score - 15;
         document.getElementById("displayScore").innerHTML = score;
-        box1.removeEventListener("click", box3Listener);
+        box4.removeEventListener("click", box4Listener);
         questionFive();
     });
 }
@@ -186,24 +186,20 @@ function questionFive() {
         score = score - 15;
         document.getElementById("displayScore").innerHTML = score;
         box1.removeEventListener("click", box1Listener);
-        questionFour();
     });
     box2.addEventListener("click", function box2Listener() {
         score = score - 15;
         document.getElementById("displayScore").innerHTML = score;
         box1.removeEventListener("click", box2Listener);
-        questionFour();
     });
     box3.addEventListener("click", function box3Listener() {
         score = score - 15;
         document.getElementById("displayScore").innerHTML = score;
         box1.removeEventListener("click", box3Listener);
-        questionFour();
     });
     box4.addEventListener("click", function box4Listener() {
         alert("Correct");
         box1.removeEventListener("click", box4Listener);
-        questionFour();
     });
 }
 
