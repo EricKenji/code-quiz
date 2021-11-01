@@ -1,7 +1,7 @@
 # Code Quiz
 
 ## Purpose
-A website with a mutiple choice five quesiton quiz.  The quiz has a countdown timer and deducts points for incorrect answers.
+A website with a mutiple choice five question quiz.  The quiz has a countdown timer and deducts points for incorrect answers.
 
 ## Built With
 * HTML
