@@ -6,6 +6,8 @@ if (localStorageString != null) {
     scores = JSON.parse(localStorageString);
 }
 
+
+// array with questions and answer choices //
 var questions = [
     {
         question: "Commonly used data types DO NOT include:",
@@ -34,6 +36,7 @@ var questions = [
     }
 ]
 
+// countdown function //
 var score = 100
 var countdown = function() {
     score--;
@@ -46,6 +49,8 @@ document.getElementById("displayScore").innerHTML = score;
 
 var startCountdown= setInterval(countdown, 1000);
 
+
+// start game function //
 function startGame() {
     var box1 = document.querySelector("#box1")
     var box2 = document.querySelector("#box2")
@@ -208,12 +213,14 @@ function startGame() {
     });
 }
 
+// end game function to log scores in local storage array //
 function endGame() {
     clearInterval(startCountdown);
     scores.push(score);
     localStorage.setItem("scores", JSON.stringify(scores));
     console.log(score);
-    document.getElementById("finalscore").innerHTML = score;}
+    document.getElementById("finalscore").innerHTML = score;
+}
 
 
 
