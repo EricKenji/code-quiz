@@ -1,5 +1,10 @@
 var titleEl = document.querySelector(".title");
 var choiceEl = document.querySelectorAll(".choice-box");
+var scores = []
+var localStorageString = localStorage.getItem("scores")
+if (localStorageString != null) {
+    scores = JSON.parse(localStorageString);
+}
 
 var questions = [
     {
@@ -32,9 +37,8 @@ var questions = [
 var score = 100
 var countdown = function() {
     score--;
-        if(score === 0) {
-            console.log("gameover");
-            clearInterval(countdown());
+        if(score <= 0) {
+            clearInterval(startCountdown);
         };
         document.getElementById("displayScore").innerHTML = score;
 };
@@ -69,12 +73,14 @@ function startGame() {
 
     box1.addEventListener("click", function () {
         score = score - 15;
+        alert("Incorrect.  You've lost 15 points.");
         document.getElementById("displayScore").innerHTML = score;
         document.getElementById("question2").style.display = "block";
         document.getElementById("question1").style.display = "none";
     });
     box2.addEventListener("click", function () {
         score = score - 15;
+        alert("Incorrect.  You've lost 15 points.");
         document.getElementById("displayScore").innerHTML = score;
         document.getElementById("question2").style.display = "block";
         document.getElementById("question1").style.display = "none";
@@ -86,18 +92,21 @@ function startGame() {
     });
     box4.addEventListener("click", function () {
         score = score - 15;
+        alert("Incorrect.  You've lost 15 points.");
         document.getElementById("displayScore").innerHTML = score;
         document.getElementById("question2").style.display = "block";
         document.getElementById("question1").style.display = "none";
     });    
     box5.addEventListener("click", function () {
         score = score - 15;
+        alert("Incorrect.  You've lost 15 points.");
         document.getElementById("displayScore").innerHTML = score;
         document.getElementById("question3").style.display = "block";
         document.getElementById("question2").style.display = "none";
     });
     box6.addEventListener("click", function () {
         score = score - 15;
+        alert("Incorrect.  You've lost 15 points.");
         document.getElementById("displayScore").innerHTML = score;
         document.getElementById("question3").style.display = "block";
         document.getElementById("question2").style.display = "none";
@@ -109,24 +118,28 @@ function startGame() {
     });
     box8.addEventListener("click", function () {
         score = score - 15;
+        alert("Incorrect.  You've lost 15 points.");
         document.getElementById("displayScore").innerHTML = score;
         document.getElementById("question3").style.display = "block";
         document.getElementById("question2").style.display = "none";
     });    
     box9.addEventListener("click", function () {
         score = score - 15;
+        alert("Incorrect.  You've lost 15 points.");
         document.getElementById("displayScore").innerHTML = score;
         document.getElementById("question4").style.display = "block";
         document.getElementById("question3").style.display = "none";
     });
     box10.addEventListener("click", function () {
         score = score - 15;
+        alert("Incorrect.  You've lost 15 points.");
         document.getElementById("displayScore").innerHTML = score;
         document.getElementById("question4").style.display = "block";
         document.getElementById("question3").style.display = "none";
     });
     box11.addEventListener("click", function () {
         score = score - 15;
+        alert("Incorrect.  You've lost 15 points.");
         document.getElementById("displayScore").innerHTML = score;
         document.getElementById("question4").style.display = "block";
         document.getElementById("question3").style.display = "none";
@@ -138,12 +151,14 @@ function startGame() {
     });    
     box13.addEventListener("click", function () {
         score = score - 15;
+        alert("Incorrect.  You've lost 15 points.");
         document.getElementById("displayScore").innerHTML = score;
         document.getElementById("question5").style.display = "block";
         document.getElementById("question4").style.display = "none";
     });
     box14.addEventListener("click", function () {
         score = score - 15;
+        alert("Incorrect.  You've lost 15 points.");
         document.getElementById("displayScore").innerHTML = score;
         document.getElementById("question5").style.display = "block";
         document.getElementById("question4").style.display = "none";
@@ -155,33 +170,43 @@ function startGame() {
     });
     box16.addEventListener("click", function () {
         score = score - 15;
+        alert("Incorrect.  You've lost 15 points.");
         document.getElementById("displayScore").innerHTML = score;
         document.getElementById("question5").style.display = "block";
         document.getElementById("question4").style.display = "none";
     });    
     box17.addEventListener("click", function () {
         score = score - 15;
+        alert("Incorrect.  You've lost 15 points.");
         document.getElementById("displayScore").innerHTML = score;
+        endGame();
     });
     box18.addEventListener("click", function () {
         score = score - 15;
+        alert("Incorrect.  You've lost 15 points.");
         document.getElementById("displayScore").innerHTML = score;
+        endGame();
     });
     box19.addEventListener("click", function () {
         score = score - 15;
+        alert("Incorrect.  You've lost 15 points.");
         document.getElementById("displayScore").innerHTML = score;
-
+        endGame();
     });
     box20.addEventListener("click", function () {
         alert("Correct");
+        endGame();
 
     });
-
-
-
 }
 
-
+function endGame() {
+    console.log("end game");
+    clearInterval(startCountdown);
+    scores.push(score);
+    localStorage.setItem("scores", JSON.stringify(scores));
+    console.log(score);
+}
 
 
 
