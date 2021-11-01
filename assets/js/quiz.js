@@ -179,34 +179,41 @@ function startGame() {
         score = score - 15;
         alert("Incorrect.  You've lost 15 points.");
         document.getElementById("displayScore").innerHTML = score;
+        document.getElementById("endgame").style.display = "block";
+        document.getElementById("question5").style.display = "none";
         endGame();
     });
     box18.addEventListener("click", function () {
         score = score - 15;
         alert("Incorrect.  You've lost 15 points.");
         document.getElementById("displayScore").innerHTML = score;
+        document.getElementById("endgame").style.display = "block";
+        document.getElementById("question5").style.display = "none";
         endGame();
     });
     box19.addEventListener("click", function () {
         score = score - 15;
         alert("Incorrect.  You've lost 15 points.");
         document.getElementById("displayScore").innerHTML = score;
+        document.getElementById("endgame").style.display = "block";
+        document.getElementById("question5").style.display = "none";
         endGame();
     });
     box20.addEventListener("click", function () {
         alert("Correct");
+        document.getElementById("endgame").style.display = "block";
+        document.getElementById("question5").style.display = "none";
         endGame();
 
     });
 }
 
 function endGame() {
-    console.log("end game");
     clearInterval(startCountdown);
     scores.push(score);
     localStorage.setItem("scores", JSON.stringify(scores));
     console.log(score);
-}
+    document.getElementById("finalscore").innerHTML = score;}
 
 
 

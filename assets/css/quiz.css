@@ -21,6 +21,7 @@
     color: white;
 }
 
+/* hides future questions */
 #question2 {
     display: none;
 }
@@ -33,7 +34,11 @@
 #question5 {
     display: none;
 }
+#endgame {
+    display: none;
+}
 
+/* for smaller screens */
 @media screen and (max-width: 768px) {
 
     section {
