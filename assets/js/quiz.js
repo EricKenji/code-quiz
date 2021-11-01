@@ -1,7 +1,5 @@
 var titleEl = document.querySelector(".title");
 var choiceEl = document.querySelectorAll(".choice-box");
-var score = 100
-
 
 var questions = [
     {
@@ -31,222 +29,161 @@ var questions = [
     }
 ]
 
+var score = 100
+var countdown = function() {
+    score--;
+        if(score === 0) {
+            console.log("gameover");
+            clearInterval(countdown());
+        };
+        document.getElementById("displayScore").innerHTML = score;
+};
+document.getElementById("displayScore").innerHTML = score;
 
+var startCountdown= setInterval(countdown, 1000);
 
 function startGame() {
     var box1 = document.querySelector("#box1")
     var box2 = document.querySelector("#box2")
     var box3 = document.querySelector("#box3")
     var box4 = document.querySelector("#box4")
+    var box5 = document.querySelector("#box5")
+    var box6 = document.querySelector("#box6")
+    var box7 = document.querySelector("#box7")
+    var box8 = document.querySelector("#box8")
+    var box9 = document.querySelector("#box9")
+    var box10 = document.querySelector("#box10")
+    var box11 = document.querySelector("#box11")
+    var box12 = document.querySelector("#box12")
+    var box13 = document.querySelector("#box13")
+    var box14 = document.querySelector("#box14")
+    var box15 = document.querySelector("#box15")
+    var box16 = document.querySelector("#box16")
+    var box17 = document.querySelector("#box17")
+    var box18 = document.querySelector("#box18")
+    var box19 = document.querySelector("#box19")
+    var box20 = document.querySelector("#box20")
 
     
-    document.getElementById("displayScore").innerHTML = score
-
-    titleEl.innerHTML = questions[0].question;
-    document.getElementById("choice-one").innerHTML = questions[0].choices[0];
-    document.getElementById("choice-two").innerHTML = questions[0].choices[1];
-    document.getElementById("choice-three").innerHTML = questions[0].choices[2];
-    document.getElementById("choice-four").innerHTML = questions[0].choices[3];
 
 
-    
-    
-    box1.addEventListener("click", function box1Listener() {
+    box1.addEventListener("click", function () {
         score = score - 15;
         document.getElementById("displayScore").innerHTML = score;
-        box1.removeEventListener("click", box1Listener)
-        questionTwo();
+        document.getElementById("question2").style.display = "block";
+        document.getElementById("question1").style.display = "none";
     });
-    box2.addEventListener("click", function box2Listener() {
+    box2.addEventListener("click", function () {
         score = score - 15;
         document.getElementById("displayScore").innerHTML = score;
-        box2.removeEventListener("click", box2Listener);
-        questionTwo();
+        document.getElementById("question2").style.display = "block";
+        document.getElementById("question1").style.display = "none";
     });
-    box3.addEventListener("click", function box3Listener() {
+    box3.addEventListener("click", function () {
         alert("Correct");
-        box3.removeEventListener("click", box3Listener)
-        questionTwo();
-
+        document.getElementById("question2").style.display = "block";
+        document.getElementById("question1").style.display = "none";
     });
-    box4.addEventListener("click", function box4Listener() {
+    box4.addEventListener("click", function () {
         score = score - 15;
         document.getElementById("displayScore").innerHTML = score;
-        box4.removeEventListener("click", box4Listener)
-        questionTwo();
+        document.getElementById("question2").style.display = "block";
+        document.getElementById("question1").style.display = "none";
+    });    
+    box5.addEventListener("click", function () {
+        score = score - 15;
+        document.getElementById("displayScore").innerHTML = score;
+        document.getElementById("question3").style.display = "block";
+        document.getElementById("question2").style.display = "none";
     });
+    box6.addEventListener("click", function () {
+        score = score - 15;
+        document.getElementById("displayScore").innerHTML = score;
+        document.getElementById("question3").style.display = "block";
+        document.getElementById("question2").style.display = "none";
+    });
+    box7.addEventListener("click", function () {
+        alert("Correct");
+        document.getElementById("question3").style.display = "block";
+        document.getElementById("question2").style.display = "none";
+    });
+    box8.addEventListener("click", function () {
+        score = score - 15;
+        document.getElementById("displayScore").innerHTML = score;
+        document.getElementById("question3").style.display = "block";
+        document.getElementById("question2").style.display = "none";
+    });    
+    box9.addEventListener("click", function () {
+        score = score - 15;
+        document.getElementById("displayScore").innerHTML = score;
+        document.getElementById("question4").style.display = "block";
+        document.getElementById("question3").style.display = "none";
+    });
+    box10.addEventListener("click", function () {
+        score = score - 15;
+        document.getElementById("displayScore").innerHTML = score;
+        document.getElementById("question4").style.display = "block";
+        document.getElementById("question3").style.display = "none";
+    });
+    box11.addEventListener("click", function () {
+        score = score - 15;
+        document.getElementById("displayScore").innerHTML = score;
+        document.getElementById("question4").style.display = "block";
+        document.getElementById("question3").style.display = "none";
+    });
+    box12.addEventListener("click", function () {
+        alert("Correct");
+        document.getElementById("question4").style.display = "block";
+        document.getElementById("question3").style.display = "none";
+    });    
+    box13.addEventListener("click", function () {
+        score = score - 15;
+        document.getElementById("displayScore").innerHTML = score;
+        document.getElementById("question5").style.display = "block";
+        document.getElementById("question4").style.display = "none";
+    });
+    box14.addEventListener("click", function () {
+        score = score - 15;
+        document.getElementById("displayScore").innerHTML = score;
+        document.getElementById("question5").style.display = "block";
+        document.getElementById("question4").style.display = "none";
+    });
+    box15.addEventListener("click", function () {
+        alert("Correct");
+        document.getElementById("question5").style.display = "block";
+        document.getElementById("question4").style.display = "none";
+    });
+    box16.addEventListener("click", function () {
+        score = score - 15;
+        document.getElementById("displayScore").innerHTML = score;
+        document.getElementById("question5").style.display = "block";
+        document.getElementById("question4").style.display = "none";
+    });    
+    box17.addEventListener("click", function () {
+        score = score - 15;
+        document.getElementById("displayScore").innerHTML = score;
+    });
+    box18.addEventListener("click", function () {
+        score = score - 15;
+        document.getElementById("displayScore").innerHTML = score;
+    });
+    box19.addEventListener("click", function () {
+        score = score - 15;
+        document.getElementById("displayScore").innerHTML = score;
+
+    });
+    box20.addEventListener("click", function () {
+        alert("Correct");
+
+    });
+
+
 
 }
 
-function prepareQuestion() {
-    titleEl.innerHTML = questions[1].question;
-    document.getElementById("choice-one").innerHTML = questions[1].choices[0];
-    document.getElementById("choice-two").innerHTML = questions[1].choices[1];
-    document.getElementById("choice-three").innerHTML = questions[1].choices[2];
-    document.getElementById("choice-four").innerHTML = questions[1].choices[3];
-    
-    box1.addEventListener("click", function box1Listener() {
-        score = score - 15;
-        document.getElementById("displayScore").innerHTML = score;
-        box1.removeEventListener("click", box1Listener);
-        box2.removeEventListener("click", box1Listener);
-        box3.removeEventListener("click", box1Listener);
-        box4.removeEventListener("click", box1Listener);
-        questionThree();
-    });
-    box2.addEventListener("click", function box2Listener() {
-        score = score - 15;
-        document.getElementById("displayScore").innerHTML = score;
-        box1.removeEventListener("click", box2Listener);
-        box2.removeEventListener("click", box2Listener);
-        box3.removeEventListener("click", box2Listener);
-        box4.removeEventListener("click", box2Listener);
-        questionThree();
-    });
-    box3.addEventListener("click", function box3Listener() {
-        alert("Correct");
-        box1.removeEventListener("click", box3Listener);
-        box2.removeEventListener("click", box3Listener);
-        box3.removeEventListener("click", box3Listener);
-        box4.removeEventListener("click", box3Listener);
-        questionThree();
 
-    });
-    box4.addEventListener("click", function box4Listener() {
-        score = score - 15;
-        document.getElementById("displayScore").innerHTML = score;
-        box1.removeEventListener("click", box4Listener);
-        box2.removeEventListener("click", box4Listener);
-        box3.removeEventListener("click", box4Listener);
-        box4.removeEventListener("click", box4Listener);
-        questionThree();
-    });
-}
 
-function questionTwo() {
-    titleEl.innerHTML = questions[1].question;
-    document.getElementById("choice-one").innerHTML = questions[1].choices[0];
-    document.getElementById("choice-two").innerHTML = questions[1].choices[1];
-    document.getElementById("choice-three").innerHTML = questions[1].choices[2];
-    document.getElementById("choice-four").innerHTML = questions[1].choices[3];
-    
-    box1.addEventListener("click", function box1Listener() {
-        score = score - 15;
-        document.getElementById("displayScore").innerHTML = score;
-        box1.removeEventListener("click", box1Listener);
-        questionThree();
-    });
-    box2.addEventListener("click", function box2Listener() {
-        score = score - 15;
-        document.getElementById("displayScore").innerHTML = score;
-        box2.removeEventListener("click", box2Listener);
-        questionThree();
-    });
-    box3.addEventListener("click", function box3Listener() {
-        alert("Correct");
-        box3.removeEventListener("click", box3Listener);
-        questionThree();
 
-    });
-    box4.addEventListener("click", function box4Listener() {
-        score = score - 15;
-        document.getElementById("displayScore").innerHTML = score;
-        box4.removeEventListener("click", box4Listener);
-        questionThree();
-    });
-}
-
-function questionThree() {
-    titleEl.innerHTML = questions[2].question;
-    document.getElementById("choice-one").innerHTML = questions[2].choices[0];
-    document.getElementById("choice-two").innerHTML = questions[2].choices[1];
-    document.getElementById("choice-three").innerHTML = questions[2].choices[2];
-    document.getElementById("choice-four").innerHTML = questions[2].choices[3];
-    
-    box1.addEventListener("click", function box1Listener() {
-        score = score - 15;
-        document.getElementById("displayScore").innerHTML = score;
-        box1.removeEventListener("click", box1Listener);
-        questionFour();
-    });
-    box2.addEventListener("click", function box2Listener() {
-        score = score - 15;
-        document.getElementById("displayScore").innerHTML = score;
-        box2.removeEventListener("click", box2Listener);
-        questionFour();
-    });
-    box3.addEventListener("click", function box3Listener() {
-        score = score - 15;
-        document.getElementById("displayScore").innerHTML = score;
-        box3.removeEventListener("click", box3Listener);
-        questionFour();
-    });
-    box4.addEventListener("click", function box4Listener() {
-        alert("Correct");
-        box4.removeEventListener("click", box4Listener);
-        questionFour();
-    });
-}
-
-function questionFour() {
-    titleEl.innerHTML = questions[3].question;
-    document.getElementById("choice-one").innerHTML = questions[3].choices[0];
-    document.getElementById("choice-two").innerHTML = questions[3].choices[1];
-    document.getElementById("choice-three").innerHTML = questions[3].choices[2];
-    document.getElementById("choice-four").innerHTML = questions[3].choices[3];
-    
-    box1.addEventListener("click", function box1Listener() {
-        score = score - 15;
-        document.getElementById("displayScore").innerHTML = score;
-        box1.removeEventListener("click", box1Listener);
-        questionFive();
-    });
-    box2.addEventListener("click", function box2Listener() {
-        score = score - 15;
-        document.getElementById("displayScore").innerHTML = score;
-        box2.removeEventListener("click", box2Listener);
-        questionFive();
-    });
-    box3.addEventListener("click", function box3Listener() {
-        alert("Correct");
-        box3.removeEventListener("click", box3Listener);
-        questionFive();
-    });
-    box4.addEventListener("click", function box4Listener() {
-        score = score - 15;
-        document.getElementById("displayScore").innerHTML = score;
-        box4.removeEventListener("click", box4Listener);
-        questionFive();
-    });
-}
-
-function questionFive() {
-    titleEl.innerHTML = questions[4].question;
-    document.getElementById("choice-one").innerHTML = questions[4].choices[0];
-    document.getElementById("choice-two").innerHTML = questions[4].choices[1];
-    document.getElementById("choice-three").innerHTML = questions[4].choices[2];
-    document.getElementById("choice-four").innerHTML = questions[4].choices[3];
-    
-    box1.addEventListener("click", function box1Listener() {
-        score = score - 15;
-        document.getElementById("displayScore").innerHTML = score;
-        box1.removeEventListener("click", box1Listener);
-    });
-    box2.addEventListener("click", function box2Listener() {
-        score = score - 15;
-        document.getElementById("displayScore").innerHTML = score;
-        box1.removeEventListener("click", box2Listener);
-    });
-    box3.addEventListener("click", function box3Listener() {
-        score = score - 15;
-        document.getElementById("displayScore").innerHTML = score;
-        box1.removeEventListener("click", box3Listener);
-    });
-    box4.addEventListener("click", function box4Listener() {
-        alert("Correct");
-        box1.removeEventListener("click", box4Listener);
-    });
-}
 
 
 startGame();
