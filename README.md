@@ -15,3 +15,5 @@ https://erickenji.github.io/code-quiz
 Made by Eric Furukawa
 
 ### Eric Kenji Furukawa
+
+![codequiz](https://user-images.githubusercontent.com/16628477/139627900-104e5322-8f04-43af-aa9b-bbe31ac6e531.png)
